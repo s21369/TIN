@@ -1,20 +1,20 @@
 h3 {
-    color: blue;
-    font-family: Verdana, sans-serif;
-    font-size: 200%;
-    margin-left: 30px;
+	color: blue;
+	font-family: Verdana, sans-serif;
+	font-size: 200%;
+	margin-left: 30px;
 }
 
 p {
-    color: teal;
-    font-family: Arial, serif;
-    font-size: 150%;
+	color: teal;
+	font-family: Arial, serif;
+	font-size: 150%;
 }
 
 table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    align-content: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+	align-content: center;
 }
 
 table {
@@ -22,11 +22,11 @@ table {
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 ul {
-    list-style-type: square;
-    margin: 10px;
-    padding: 5px;
+	list-style-type: square;
+	margin: 10px;
+	padding: 5px;
 }
