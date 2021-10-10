@@ -1,0 +1,22 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#content {
+    background-color: white;
+    width: 75%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+	padding: 0% 1%;
+    max-width: 100%;
+}
