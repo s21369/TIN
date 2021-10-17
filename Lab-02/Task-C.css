@@ -1,0 +1,52 @@
+body {
+	background-color: #202020;
+}
+
+#content {
+	background-color: #F5F5F5;
+	width: 60%;
+	margin: auto;
+	padding: 1%;
+	border-style: solid;
+	border-color: #ff0066;
+}
+
+#banner {
+	width: 75%;
+	margin: auto;
+	margin-bottom: 5%;
+	display: block;
+	border-style: solid;
+	border-color: #ffcc00;
+}
+
+article {
+	width: 75%;
+	margin: 0 auto 4%;
+}
+
+.article-header {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+article h1 {
+	margin: 0 2%;
+	margin-bottom: 0.3%;
+	font-size: 20px;
+	font-family: Helvetica;
+}
+
+.article-content {
+	margin: 2% 3%;
+	padding: 2%;
+	font-family: "Trebuchet MS";
+	background-color: #e6e6ff;
+	border-style: dashed;
+	border-width: 2px;
+	border-color: #ffcc00;
+}
+
+a:hover {
+	color: #008000;
+}
