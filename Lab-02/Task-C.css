@@ -2,13 +2,14 @@ body {
 	background-color: #202020;
 }
 
+/* I have used margin: auto to make everything equidistant */
 #content {
 	background-color: #F5F5F5;
 	width: 60%;
 	margin: auto;
 	padding: 1%;
 	border-style: solid;
-	border-color: #ff0066;
+	border-color: #FF0066;
 }
 
 #banner {
@@ -17,7 +18,7 @@ body {
 	margin-bottom: 5%;
 	display: block;
 	border-style: solid;
-	border-color: #ffcc00;
+	border-color: #FFCC00;
 }
 
 article {
@@ -25,11 +26,14 @@ article {
 	margin: 0 auto 4%;
 }
 
+/* I could have used here text-decoration: underline but I decided to do the same as in your example */
 .article-header {
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
+	border-bottom-color: black;
 }
 
+/* I added here also margin from the right side, not only left one */
 article h1 {
 	margin: 0 2%;
 	margin-bottom: 0.3%;
@@ -37,14 +41,15 @@ article h1 {
 	font-family: Helvetica;
 }
 
+/* Here also I added margins from both left and right sides */
 .article-content {
 	margin: 2% 3%;
 	padding: 2%;
 	font-family: "Trebuchet MS";
-	background-color: #e6e6ff;
+	background-color: #E6E6FF;
 	border-style: dashed;
 	border-width: 2px;
-	border-color: #ffcc00;
+	border-color: #FFCC00;
 }
 
 a:hover {
