@@ -1,0 +1,97 @@
+.grid {
+	display: grid;
+	background-color: #2196F3;
+	grid-template-columns: minmax(auto, 20vw) auto;
+	grid-template-rows: minmax(20vh, auto);
+	grid-gap: calc(1vh);
+	padding: 0.5%;
+}
+
+.grid-item {
+	background-color: #80AAFF;
+	padding: 2%;
+}
+
+#item-1 {
+	grid-column-start: span 2;
+}
+
+#item-2 {
+	grid-row-start: span 5;
+}
+
+header {
+	grid-area: header;
+}
+
+header > img {
+	width: 25%;
+	margin: auto;
+	margin-top: 2%;
+	display: block;
+	border-radius: calc(3vh);
+	border-style: solid;
+	border-color: #FFCC00;
+	transform: rotate(-10deg);
+	box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.5);
+}
+
+header > h1 {
+	text-align: center;
+	margin-bottom: 0;
+	font-family: Helvetica;
+}
+
+#gallery {
+	grid-area: gallery;
+}
+
+figure {
+	margin: 5% 0 10% 0;
+	text-align: center;
+}
+
+figure > img {
+	width: 15vw;
+}
+
+figure > figcaption {
+	font-weight: bold;
+	font-family: Helvetica;
+}
+
+article {
+	grid-area: article;
+	column-width: 250px;
+}
+
+article > p {
+	margin: 0;
+	font-size: 16px;
+	font-family: Tahoma;
+}
+
+article img {
+	margin: 2% 3% 0 0;
+	float: left;
+	width: 7vw;
+}
+
+q {
+	margin: 0 2%;
+	color: #FF0066;
+	font-size: 20px;
+	font-style: italic;
+}
+
+@media only screen and (max-width: 800px) {
+	.grid {
+		display: grid;
+		background-color: #2196F3;
+		grid-template-areas: "header"
+		"article"
+		"gallery";
+		grid-gap: calc(1vh);
+		padding: 0.5%;
+	}
+}
