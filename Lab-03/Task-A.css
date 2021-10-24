@@ -1,23 +1,22 @@
+body, .grid {
+	background-color: #202020;
+	color: #DCDCDC;
+}
+
 .grid {
 	display: grid;
-	background-color: #2196F3;
 	grid-template-columns: minmax(auto, 20vw) auto;
 	grid-template-rows: minmax(20vh, auto);
+	grid-template-areas: "header header"
+		"aside article"
+		"footer footer";
 	grid-gap: calc(1vh);
 	padding: 0.5%;
 }
 
 .grid-item {
-	background-color: #80AAFF;
+	background-color: #282828;
 	padding: 2%;
-}
-
-#item-1 {
-	grid-column-start: span 2;
-}
-
-#item-2 {
-	grid-row-start: span 5;
 }
 
 header {
@@ -40,10 +39,11 @@ header > h1 {
 	text-align: center;
 	margin-bottom: 0;
 	font-family: Helvetica;
+	font-size: 36px;
 }
 
-#gallery {
-	grid-area: gallery;
+aside {
+	grid-area: aside;
 }
 
 figure {
@@ -53,16 +53,32 @@ figure {
 
 figure > img {
 	width: 15vw;
+	border-radius: calc(2vh);
+	border-style: solid;
+	border-color: #3399FF;
+	border-width: 3px;
 }
 
 figure > figcaption {
 	font-weight: bold;
 	font-family: Helvetica;
+	font-size: 20px;
 }
 
 article {
 	grid-area: article;
 	column-width: 250px;
+	margin-bottom: 3%;
+}
+
+article h1 {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #DCDCDC;
+	margin: 0;
+	margin-bottom: 3%;
+	font-size: 22px;
+	font-family: Helvetica;
 }
 
 article > p {
@@ -75,6 +91,10 @@ article img {
 	margin: 2% 3% 0 0;
 	float: left;
 	width: 7vw;
+	border-radius: calc(1vh);
+	border-style: solid;
+	border-color: #FF0066;
+	border-width: 3px;
 }
 
 q {
@@ -84,14 +104,66 @@ q {
 	font-style: italic;
 }
 
+footer {
+	grid-area: footer;
+}
+
+footer > h1 {
+	text-align: center;
+	margin: 0;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
 @media only screen and (max-width: 800px) {
 	.grid {
-		display: grid;
-		background-color: #2196F3;
+		grid-template-columns: 1fr;
 		grid-template-areas: "header"
 		"article"
-		"gallery";
-		grid-gap: calc(1vh);
-		padding: 0.5%;
+		"aside"
+		"footer";
+	}
+	
+	article {
+		column-count: 1;
+	}
+	
+	article img {
+		width: 30vw;
+	}
+	
+	header > img {
+		width: 60%;
+		margin-top: 4%;
+		display: block;
+	}
+	
+	header > h1 {
+		font-size: 48px;
+	}
+	
+	article h1 {
+		border-bottom-width: 3px;
+		font-size: 36px;
+	}
+	
+	article > p {
+		font-size: 18px;
+	}
+	
+	figure {
+		margin: 3% 0 3% 0;
+	}
+	
+	figure > img {
+		width: 60vw;
+	}
+	
+	figure > figcaption {
+		font-size: 36px;
+	}
+	
+	footer > h1 {
+		font-size: 24px;
 	}
 }
