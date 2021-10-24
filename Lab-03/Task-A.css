@@ -71,7 +71,7 @@ article {
 	margin-bottom: 3%;
 }
 
-article h1 {
+article > h1 {
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 	border-bottom-color: #DCDCDC;
@@ -142,7 +142,7 @@ footer > h1 {
 		font-size: 48px;
 	}
 	
-	article h1 {
+	article > h1 {
 		border-bottom-width: 3px;
 		font-size: 36px;
 	}
