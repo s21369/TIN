@@ -1,4 +1,4 @@
-let num = 7;
+let number = 7;
 
 // assuming this sequence starts with 1
 function fibonacci(num) {
@@ -8,4 +8,4 @@ function fibonacci(num) {
     return fibonacci(num - 1) + fibonacci(num - 2);
 }
 
-console.log(`Fibonacci number at position ${num} is ${fibonacci(num)}`);
+console.log(`Fibonacci number at position ${number} is ${fibonacci(number)}`);

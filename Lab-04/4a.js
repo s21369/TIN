@@ -1,4 +1,4 @@
-let num = 5;
+let number = 5;
 
 function factorialIter(num) {
     let fact = 1;
@@ -16,4 +16,4 @@ const factorialRec = function(num) {
     }
 }
 
-console.log(`Factorial of number ${num}:\nIterative: ${factorialIter(num)}\nRecursive: ${factorialRec(num)}`);
+console.log(`Factorial of number ${number}:\nIterative: ${factorialIter(number)}\nRecursive: ${factorialRec(number)}`);

@@ -1,4 +1,4 @@
-let str = "Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit";
+let string = "Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit";
 
 function longestWord(str) {
     let words = str.split(" ");
@@ -6,4 +6,4 @@ function longestWord(str) {
     return words[wordsLength.indexOf(Math.max(...wordsLength))];
 }
 
-console.log(`Longest word in "${str}" is "${longestWord(str)}"`);
+console.log(`Longest word in "${string}" is "${longestWord(string)}"`);

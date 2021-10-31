@@ -1,5 +1,5 @@
 const regex = /[^a-z0-9]/g;
-let str = "Was it a car or a cat I saw";
+let string = "Was it a car or a cat I saw";
 
 
 function palindrome(str) {
@@ -10,4 +10,4 @@ function palindrome(str) {
     return false;
 }
 
-console.log(`String "${str}" is ${palindrome(str) ? "" : "NOT "}palindrome`);
+console.log(`String "${string}" is ${palindrome(string) ? "" : "NOT "}palindrome`);
