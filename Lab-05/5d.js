@@ -1,7 +1,7 @@
-function Student(idStudent, firstName, lastname, grades) {
+function Student(idStudent, firstName, lastName, grades) {
     this.idStudent = idStudent,
     this.firstName = firstName,
-    this.lastname = lastname,
+    this.lastname = lastName,
     this.grades = grades,
 
     Object.defineProperties(this, {
@@ -12,15 +12,15 @@ function Student(idStudent, firstName, lastname, grades) {
         },
         "fullName": {
             "get": function() {
-                return `${firstName} ${lastname}`;
+                return `${this.firstName} ${this.lastName}`;
             },
             "set": function(fullName) {
                 let arr = fullName.split(" ");
                 if (arr.length !== 2) {
                     return;
                 }
-                firstName = arr[0];
-                lastname = arr[1];
+                this.firstName = arr[0];
+                this.lastname = arr[1];
             }
         }
     });

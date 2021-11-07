@@ -1,11 +1,11 @@
-function Student(idStudent, firstName, lastname, grades) {
+function Student(idStudent, firstName, lastName, grades) {
     this.idStudent = idStudent,
     this.firstName = firstName,
-    this.lastname = lastname,
+    this.lastname = lastName,
     this.grades = grades,
 
     this.getFullName = function() {
-        return `${firstName} ${lastname}`;
+        return `${this.firstName} ${this.lastName}`;
     }
 
     this.getAverageGrade = function() {

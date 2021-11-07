@@ -1,7 +1,7 @@
-function Student(idStudent, firstName, lastname) {
+function Student(idStudent, firstName, lastName) {
     this.idStudent = idStudent,
     this.firstName = firstName,
-    this.lastname = lastname
+    this.lastname = lastName
 }
 
 Student.prototype.courses = ["TIN", "ZPR", "BYT", "GRK"];
