@@ -11,7 +11,7 @@ class Student {
     }
 
     get fullName() {
-        return `${this.firstName} ${this.lastname}`;
+        return `${this.firstName} ${this.lastName}`;
     }
 
     set fullName(fullName) {
@@ -20,7 +20,7 @@ class Student {
             return;
         }
         this.firstName = arr[0];
-        this.lastname = arr[1];
+        this.lastName = arr[1];
     }
 
     printDetails() {
