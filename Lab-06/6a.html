@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Task-A</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="6a.js"></script>
+    <style>
+        form label {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 0.7%;
+        }
+
+        form input {
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 0.7%;
+        }
+
+        #temp, #convert-button {
+            width: 8%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form>
+        <label for="temp">Temperature: </label><br>
+        <input type="number" name="temp" id="temp" required><br>
+        <input type="radio" id="temp-c" name="temp-scale" value="c" checked>
+        <label for="temp-c">Celsius</label><br>
+        <input type="radio" id="temp-f" name="temp-scale" value="f">
+        <label for="temp-f">Fahrenheit</label><br>
+        <input type="button" id="convert-button" value="Convert" onclick="convert()">
+    </form>
+    <div id="temp-converted">
+
+    </div>
+</body>
+</html>
