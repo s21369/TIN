@@ -1,0 +1,24 @@
+{
+  "name": "tin",
+  "version": "1.0.0",
+  "description": "pjatk tin",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s21369/TIN.git"
+  },
+  "author": "Bohdan Kordon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s21369/TIN/issues"
+  },
+  "homepage": "https://github.com/s21369/TIN#readme",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3"
+  }
+}

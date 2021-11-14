@@ -1,5 +1,17 @@
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+function addTableRow(username, email, age) {
+    const table = document.getElementById("table-data");
+    const row = table.insertRow();
+    const usernameCell = row.insertCell();
+    usernameCell.textContent = username;
+    const emailCell = row.insertCell();
+    emailCell.textContent = email;
+    const ageCell = row.insertCell();
+    ageCell.textContent = age;
+}
+
+// eslint-disable-next-line no-unused-vars
 function validateForm() {
     const username = document.getElementById("username");
     const email = document.getElementById("email");
@@ -12,7 +24,7 @@ function validateForm() {
         errorMessageP.textContent = `Username should be ${username.value.length < 4
             ? "at least 4 characters long"
             : "no more than 16 characters long"}!`;
-        let parentNode = document.getElementById("invalid-username-message");
+        const parentNode = document.getElementById("invalid-username-message");
         parentNode.innerHTML = "";
         parentNode.appendChild(errorMessageP);
         invalidCount++;
@@ -24,7 +36,7 @@ function validateForm() {
         email.setAttribute("class", "invalid");
         const errorMessageP = document.createElement("p");
         errorMessageP.textContent = "Email is not valid!";
-        let parentNode = document.getElementById("invalid-email-message");
+        const parentNode = document.getElementById("invalid-email-message");
         parentNode.innerHTML = "";
         parentNode.appendChild(errorMessageP);
         invalidCount++;
@@ -36,7 +48,7 @@ function validateForm() {
         age.setAttribute("class", "invalid");
         const errorMessageP = document.createElement("p");
         errorMessageP.textContent = "You should be at least 18 years old!";
-        let parentNode = document.getElementById("invalid-age-message");
+        const parentNode = document.getElementById("invalid-age-message");
         parentNode.innerHTML = "";
         parentNode.appendChild(errorMessageP);
         invalidCount++;
@@ -47,19 +59,8 @@ function validateForm() {
     if (invalidCount === 0) {
         addTableRow(username.value, email.value, age.value);
         document.getElementById("form-data").reset();
-        document.querySelector("#form-data").querySelectorAll("input").forEach(e => {
+        document.querySelector("#form-data").querySelectorAll("input").forEach((e) => {
             e.removeAttribute("class", "valid");
         });
     }
-}
-
-function addTableRow(username, email, age) {
-    const table = document.getElementById("table-data");
-    let row = table.insertRow();
-    let usernameCell = row.insertCell();
-    usernameCell.textContent = username;
-    let emailCell = row.insertCell();
-    emailCell.textContent = email;
-    let ageCell = row.insertCell();
-    ageCell.textContent = age;
 }

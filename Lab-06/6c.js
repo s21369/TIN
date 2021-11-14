@@ -1,5 +1,6 @@
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+// eslint-disable-next-line no-unused-vars
 function validateForm() {
     const username = document.getElementById("username");
     const email = document.getElementById("email");
@@ -12,7 +13,7 @@ function validateForm() {
         errorMessageP.textContent = `Username should be ${username.value.length < 4
             ? "at least 4 characters long"
             : "no more than 16 characters long"}!`;
-        let parentNode = document.getElementById("invalid-username-message");
+        const parentNode = document.getElementById("invalid-username-message");
         parentNode.innerHTML = "";
         parentNode.appendChild(errorMessageP);
         invalidCount++;
@@ -24,7 +25,7 @@ function validateForm() {
         email.setAttribute("class", "invalid");
         const errorMessageP = document.createElement("p");
         errorMessageP.textContent = "Email is not valid!";
-        let parentNode = document.getElementById("invalid-email-message");
+        const parentNode = document.getElementById("invalid-email-message");
         parentNode.innerHTML = "";
         parentNode.appendChild(errorMessageP);
         invalidCount++;
@@ -36,7 +37,7 @@ function validateForm() {
         age.setAttribute("class", "invalid");
         const errorMessageP = document.createElement("p");
         errorMessageP.textContent = "You should be at least 18 years old!";
-        let parentNode = document.getElementById("invalid-age-message");
+        const parentNode = document.getElementById("invalid-age-message");
         parentNode.innerHTML = "";
         parentNode.appendChild(errorMessageP);
         invalidCount++;
@@ -47,6 +48,6 @@ function validateForm() {
 
     if (invalidCount !== 0) {
         return false;
-    };
+    }
     return true;
 }
