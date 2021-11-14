@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Task-C</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="6c.js"></script>
+    <style>
+        form > label {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 0.2%;
+        }
+
+        form > input {
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 1%;
+        }
+
+        #submit-button {
+            width: 12%;
+        }
+
+        .invalid {
+            border: 2px dashed #FF3333;
+            background-color: #FFE6E6;
+        }
+
+        .valid {
+            border: 2px solid #33FF33;
+            background-color: #E6FFE6;
+        }
+
+        .invalid-message > p {
+            color: #FF3333;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 0.5%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Some Forms</h1>
+    <form id="form-data" onsubmit="return validateForm()">
+        <label for="username">Enter your username: </label><br>
+        <input type="text" name="username" id="username" required><br>
+        <div class="invalid-message" id="invalid-username-message"></div>
+        <label for="email">Enter your email: </label><br>
+        <!-- using type text here so that I can validate it using a function -->
+        <input type="text" name="email" id="email" required><br>
+        <div class="invalid-message" id="invalid-email-message"></div>
+        <label for="age">Enter your age: </label><br>
+        <input type="number" name="age" id="age" required><br>
+        <div class="invalid-message" id="invalid-age-message"></div>
+        <input type="submit" id="submit-button" value="Submit Data">
+    </form>
+</body>
+</html>
