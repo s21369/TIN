@@ -1,9 +1,11 @@
 class Student {
     constructor(idStudent, firstName, lastName, grades) {
+        /* eslint-disable no-unused-expressions, no-sequences */
         this.idStudent = idStudent,
         this.firstName = firstName,
         this.lastName = lastName,
-        this.grades = grades
+        this.grades = grades;
+        /* eslint-enable */
     }
 
     get averageGrade() {
@@ -15,12 +17,11 @@ class Student {
     }
 
     set fullName(fullName) {
-        let arr = fullName.split(" ");
+        const arr = fullName.split(" ");
         if (arr.length !== 2) {
             return;
         }
-        this.firstName = arr[0];
-        this.lastName = arr[1];
+        [this.firstName, this.lastName] = [...arr];
     }
 
     printDetails() {
@@ -28,8 +29,8 @@ class Student {
     }
 }
 
-let s1 = new Student(1, "John", "Smith", [3, 4, 3, 4, 5, 4, 3, 5]);
-let s2 = new Student(2, "Brandon", "Miller", [5, 5, 3, 4, 4, 5, 2, 5]);
+const s1 = new Student(1, "John", "Smith", [3, 4, 3, 4, 5, 4, 3, 5]);
+const s2 = new Student(2, "Brandon", "Miller", [5, 5, 3, 4, 4, 5, 2, 5]);
 
 s2.printDetails();
 s1.printDetails();

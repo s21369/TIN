@@ -1,37 +1,32 @@
 function Student(idStudent, firstName, lastName, grades) {
+    /* eslint-disable no-unused-expressions, no-sequences */
     this.idStudent = idStudent,
     this.firstName = firstName,
-    this.lastname = lastName,
+    this.lastName = lastName,
     this.grades = grades,
+    /* eslint-enable */
 
     Object.defineProperties(this, {
-        "averageGrade": {
-            "get": function() {
-                return (this.grades.reduce((a, b) => a + b, 0) / this.grades.length);
-            }
+        averageGrade: {
+            get: () => (this.grades.reduce((a, b) => a + b, 0) / this.grades.length),
         },
-        "fullName": {
-            "get": function() {
-                return `${this.firstName} ${this.lastName}`;
-            },
-            "set": function(fullName) {
-                let arr = fullName.split(" ");
+        fullName: {
+            get: () => `${this.firstName} ${this.lastName}`,
+            set: (fullName) => {
+                const arr = fullName.split(" ");
                 if (arr.length !== 2) {
                     return;
                 }
-                this.firstName = arr[0];
-                this.lastname = arr[1];
-            }
-        }
+                [this.firstName, this.lastName] = [...arr];
+            },
+        },
     });
 
-    this.printDetails = function() {
-        console.log(`Full name: ${this.fullName}\nAverage grade: ${this.averageGrade}\n`);
-    }
+    this.printDetails = () => console.log(`Full name: ${this.fullName}\nAverage grade: ${this.averageGrade}\n`);
 }
 
-let s1 = new Student(1, "John", "Smith", [3, 4, 3, 4, 5, 4, 3, 5]);
-let s2 = new Student(2, "Brandon", "Miller", [5, 5, 3, 4, 4, 5, 2, 5]);
+const s1 = new Student(1, "John", "Smith", [3, 4, 3, 4, 5, 4, 3, 5]);
+const s2 = new Student(2, "Brandon", "Miller", [5, 5, 3, 4, 4, 5, 2, 5]);
 
 s1.printDetails();
 s2.printDetails();

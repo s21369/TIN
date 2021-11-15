@@ -16,6 +16,8 @@
         "indent": ["error", 4],
         "no-alert": "off",
         "no-plusplus": "off",
-        "semi": ["error", "always"]
+        "semi": ["error", "always"],
+        "no-console": "off",
+        "max-classes-per-file": ["error", 2]
     }
 }
