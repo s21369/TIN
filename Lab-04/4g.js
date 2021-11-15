@@ -1,7 +1,7 @@
-let bool = true;
+const bool = true;
 
 function getType(v) {
-    return typeof(v);
+    return typeof v;
 }
 
 console.log(`Variable type is ${getType(bool)}`);

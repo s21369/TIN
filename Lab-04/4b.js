@@ -1,4 +1,4 @@
-let number = 7;
+const number = 7;
 
 // assuming this sequence starts with 1
 function fibonacci(num) {
