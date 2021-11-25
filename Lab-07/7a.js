@@ -22,7 +22,7 @@ const requestListener = (req, res) => {
                 result = `${num1} * ${num2} = ${num1 * num2}`;
                 break;
             case "/div":
-                result = `${num1} / ${num2} = ${num1 / num2}`;
+                result = `${num1} / ${num2} = ${(num1 / num2).toFixed(2)}`;
                 break;
             default:
                 break;
