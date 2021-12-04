@@ -5,7 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+// const usersRouter = require("./routes/users");
 
 const app = express();
 
@@ -19,8 +19,25 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+// task A
+app.get("/hello", (req, res) => {
+    res.send("Hello, World!");
+});
+
+app.get("/form", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "form.html"));
+});
+
+app.post("/formdata", (req, res) => {
+    res.render("formdata", {
+        username: req.body.username,
+        email: req.body.email,
+        age: req.body.age,
+    });
+});
+
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
+// app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -28,7 +45,8 @@ app.use((req, res, next) => {
 });
 
 // error handler
-app.use((err, req, res) => {
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get("env") === "development" ? err : {};
