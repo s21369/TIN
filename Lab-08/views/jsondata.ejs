@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Task-C</title>
+	<title>Task-D</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         table, th, td {
@@ -19,14 +19,14 @@
     <h1>Some Forms</h1>
     <table id="table-data">
         <tr>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Age</th>
+            <% Object.keys(data).forEach(key => { %>
+                <th><%= key %></th>
+            <% }); %>
         </tr>
         <tr>
-            <td><%= username %></td>
-            <td><%= email %></td>
-            <td><%= age %></td>
+            <% Object.values(data).forEach(value => { %>
+                <td><%= value %></td>
+            <% }); %>
         </tr>
     </table>
 </body>

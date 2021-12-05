@@ -5,7 +5,6 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
-// const usersRouter = require("./routes/users");
 
 const app = express();
 
@@ -24,10 +23,12 @@ app.get("/hello", (req, res) => {
     res.send("Hello, World!");
 });
 
+// task B
 app.get("/form", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "form.html"));
 });
 
+// task C
 app.post("/formdata", (req, res) => {
     res.render("formdata", {
         username: req.body.username,
@@ -36,8 +37,22 @@ app.post("/formdata", (req, res) => {
     });
 });
 
+/**
+ * Example JSON
+ * {
+ *   "username": "bohdan",
+ *   "country": "Ukraine",
+ *   "email": "bohdankordon@gmail.com",
+ *   "gender": "M",
+ *   "age": 20
+ * }
+ */
+// task D
+app.post("/jsondata", (req, res) => {
+    res.render("jsondata", { data: req.body });
+});
+
 app.use("/", indexRouter);
-// app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
