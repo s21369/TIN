@@ -18,9 +18,36 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+// task A
 app.post("/calc", (req, res) => {
-    console.log(req);
-    res.end();
+    const data = req.body;
+    const num1 = parseInt(data.n1, 10);
+    const num2 = parseInt(data.n2, 10);
+    if (!Number.isNaN(num1) && !Number.isNaN(num2)) {
+        switch (data.op) {
+        case "+":
+            data.res = num1 + num2;
+            break;
+        case "-":
+            data.res = num1 - num2;
+            break;
+        case "*":
+            data.res = num1 * num2;
+            break;
+        case "/":
+            data.res = num1 / num2;
+            break;
+        default:
+            data.error = "op should be either '+', '-', '*' or '/'";
+            break;
+        }
+    } else {
+        data.error = "n1 and n2 should be numbers";
+    }
+    if ("error" in data) {
+        res.status(400);
+    }
+    res.json(data);
 });
 
 app.use("/", indexRouter);
