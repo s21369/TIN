@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Task-B</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./javascripts/form.js"></script>
+    <style>
+        form > label {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 0.2%;
+        }
+
+        form > input, select {
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 1%;
+        }
+
+        #submit-button {
+            width: 12%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Some Form</h1>
+    <form id="form-data">
+        <label for="num1">Enter number 1: </label><br>
+        <input type="number" name="num1" id="num1" required><br>
+        <label for="num2">Enter number 2: </label><br>
+        <input type="number" name="num2" id="num2" required><br>
+        <label for="op">Choose an operation:</label><br>
+        <select name="op" id="op">
+            <option value="+">Add</option>
+            <option value="-">Subtract</option>
+            <option value="*">Multiply</option>
+            <option value="/">Divide</option>
+        </select><br>
+        <input type="button" id="submit-button" value="Submit Data" onclick="calc()">
+    </form>
+    <div id="res"></div>
+</body>
+</html>
