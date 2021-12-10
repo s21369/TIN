@@ -1,0 +1,25 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "root": true,
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 13
+    },
+    "rules": {
+        "linebreak-style": ["error", "windows"],
+        "quotes": ["error", "double"],
+        "indent": ["error", 4],
+        "no-alert": "off",
+        "no-plusplus": "off",
+        "semi": ["error", "always"],
+        "no-console": "off",
+        "max-classes-per-file": ["error", 2],
+        "import/newline-after-import": "off"
+    }
+}
